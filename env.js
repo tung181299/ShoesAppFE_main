@@ -1,0 +1,13 @@
+
+export const dialogflowConfig = {
+  type: "service_account",
+  project_id: "t-shoes-immx",
+  private_key_id: "fa7a505796919fe9ab23eabdd50a88c50314a928",
+  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4+g+NlWo9+GmO\nnn1hIzX05ADqreUboXHISoXJyZQwXLNk4Rn7VVpMvZD5vRYPpJLrytzReMVNSaRt\nT2pzKihvunXKTNSNtHAexM9QkVlsDPF6AKFSW+jwIwD0PAO5RddLxf4qr1BMUrJm\nMm09icMRHfMr6j8Y/AKfnN69KglFwWaA/LPHAhDopWVinp3jHKEgGjfGg+qmAFvc\nXhuBRQjIBUuWAL2c5rclpTKxWbON0Me79VEzcYIseEk2Ff6AzN+wo7JsyxYfFDW1\nwb1Gs39me3catONkzd3oSK101xSMq9b2QQhH0FuUUIOkewucs93Pwyi7KP9wuqVD\nJxVJ9wzhAgMBAAECggEAFkpf/G5QdrZMNhkIP9/n3SJqr90TulAqr3m3hJkLiAZr\nwdDUejKPZqcDZOzxzyHEaLCyCnYUxJsGuvtydv1SESC1mBLJHGhtiG+sEefqEDjB\nErQnvI6B1ApLz6K5yiZN6v4pgkhNE111zRXvjxZeUN48kwKv5tlbkZNsTfxWULbo\nd0Y/xRqUwhR1YoDzr2Un1hXBoGasi7Yh7JMvcjS0pCmvvFh4rL9k68Hg+EqvU08U\nepdt6j62+aA7EmRmQqSgOefD+yKwrfEgGdxAJOM8agDduuoosoisUI1oreLz8Hs7\nVXSpE2MzXa+PA70BkpZSoICNGc2L4UAN764yXkdK5wKBgQDtdEsbCXNS65CYmTEM\ngyOt0n9zIeoexvEA1XEf4PwN3QpRUXBvwC8pa1DeDk/KvsiA0FRGEuZZOknm9Ao1\nupaInIXXTeqMnYewfG6+U6jHXw4nEAiwXLoWQ+OU5yV3NYazP+p5edXZVk2wEWmB\n95vSbXidw9E4F9vtVN4mIHNvtwKBgQDHbIXNVs5L/rHrDDmdvw1ASB+VQ0vjS4xc\nYbvTC7A2MY3azsahrlxhTDiXiVxann5TBaEPONWs9mvBfX8lPNLYdpxgamY1LF4m\nHio7xbJccq4iv5YOWOzew2Bv0nmO1jD+SF6MFIWDfnBeF3wDDa9zEe2GE4HMmuLL\n+NkVZZc4JwKBgGFo9KqZvOKGWmIPbgyo+4kCMmCDyCxqBlIGPYsLW7tAM0xasVpW\np8JBEQKXMmqEy3H0hK3ecPqnq8t/z3RtH/XY6BsEDrUypohi83dGkJWBTCgALuBS\nmdAqd4ENNdRqc+Cy1riQn4ayHdqduf+kGRtA51spCnoNZ54704omg9SPAoGBAKEX\nnQ4+bO8ekwJYIcK3rjCbEkg00HyPbpbBrEPTUUi1xu1V00aP3rgKJjzjDON23Hyc\nM3pkYtcRSAJJKggelgOd7LxFtsKFUJhiDaOzE11ylhAjy0dTtiRMlv49e0xS4cjH\nFPj7Ks8JuCOJvPeKeovtk32XDGcHRuWV42ZRZlJJAoGBAKQyL/ZSMZQ0prCd05Ty\nRQ0mhDoa24SeZBF6Zuw85JY22wFfc/LO0Sz1f0HfES7FCBp+z2igr/JQlLRCBLqJ\nQX1A2D30bCeyNaVphianRE1nTl0hvGU8FoeKbKUosH+QZYim+yQtgR/tjX+x0jWg\nrdWxOvaSjQXkTq55MFUPOEVQ\n-----END PRIVATE KEY-----\n",
+  client_email: "shin-161@t-shoes-immx.iam.gserviceaccount.com",
+  client_id: "101773976052386384473",
+  auth_uri: "https://accounts.google.com/o/oauth2/auth",
+  token_uri: "https://oauth2.googleapis.com/token",
+  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+  client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/shin-161%40t-shoes-immx.iam.gserviceaccount.com"
+}

@@ -32,7 +32,12 @@ const styles = StyleSheet.create({
   },
   price: {
     color: "#e3edf7",
-    fontSize: 16
+    fontSize: 16,
+    justifyContent: "flex-start"
+  },
+  buynow: {
+    color: "#e3edf7",
+    fontSize: 11
   },
   quantity: {
     flexDirection: "row",
@@ -44,7 +49,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 10,
     padding: 10,
-    borderColor: "#e3edf7"
+    borderColor: "#e3edf7",
+    marginHorizontal: 5
   },
   scrollView: {
     marginBottom: 60

@@ -1,16 +1,7 @@
-import React from 'react';
-import { StyleSheet, View, ActivityIndicator, Text } from 'react-native';
 import {
-  BallIndicator,
-  BarIndicator,
-  DotIndicator,
-  MaterialIndicator,
-  PacmanIndicator,
-  PulseIndicator,
-  SkypeIndicator,
-  UIActivityIndicator,
-  WaveIndicator,
+  DotIndicator
 } from 'react-native-indicators';
+import React from 'react'
 
 export default function Loading() {
   return (

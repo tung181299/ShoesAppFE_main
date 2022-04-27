@@ -5,8 +5,6 @@ import {
 import {responseSuccess, responseFailed} from '../utils/dataResponseUtils';
 
 export const getProducts = data => {
-  console.log("BRAND: ", data.brand);
-  console.log("TYPE: ", data.type);
   return new Promise((resolve, reject) => {
     mainAxios
       .get(API_GET_PRODUCTS, {

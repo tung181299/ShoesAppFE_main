@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   viewInfo: {
     width: w - 165,
-    height: 120,
+    height: 180,
     borderRadius: 10,
     backgroundColor: '#E3EDF7',
     shadowColor: "#000",
@@ -66,6 +66,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'absolute', //Here is the trick
     bottom: 0, //Here is the trick
+  },
+  bottomView1: {
+    width: '100%',
+    height: 50,
+    backgroundColor: '#036d9e',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute', //Here is the trick
+    bottom: 55, //Here is the trick
   },
   textStyle: {
     fontSize: 20,
@@ -153,6 +162,31 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor: "#84a2bf",
   },
+  myOrders: {
+    width: "80%",
+    height: 40,
+    backgroundColor: "#37b053",
+    marginLeft: "10%",
+    alignItems: "center",
+    borderRadius: 6,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  txtMyOrders: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#fff",
+    marginTop: 5
+  },
+  loading: {
+    marginTop: 55
+  }
 });
 
 export default styles;

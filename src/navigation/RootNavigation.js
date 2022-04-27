@@ -7,12 +7,12 @@ export const isReadyRef = React.createRef();
 export const navigationRef = React.createRef();
 
 export function navigate(name, params) {
-  console.log('Navigation ref current: ', navigationRef.current, name);
+  // console.log('Navigation ref current: ', navigationRef.current, name);
   navigationRef.current?.navigate(name, params);
-  console.log(
-    'Navigation ref after navigate: ',
-    navigationRef.current?.getCurrentRoute(),
-  );
+  // console.log(
+  //   'Navigation ref after navigate: ',
+  //   navigationRef.current?.getCurrentRoute(),
+  // );
   // Bug: if not navigate first time, we need to navigate again
   if (navigationRef.current?.getCurrentRoute()?.name != name) {
     navigationRef.current?.navigate(name, params);

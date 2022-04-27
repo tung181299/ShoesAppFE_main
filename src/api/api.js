@@ -2,6 +2,7 @@ import axios from 'axios';
 import Storage from '@react-native-async-storage/async-storage'
 
 export const SERVER = 'https://t-shoes-app.herokuapp.com/api/';
+// export const SERVER ='http://10.0.2.2:3000/api/'
 
 const defaultOptions = {
   baseURL: SERVER,
@@ -36,3 +37,15 @@ export const API_GET_PRODUCTS = "getProducts";
 //GET PRODUCTS IN CART
 export const API_GET_PRODUCTS_IN_CART = "getProductsByUserId";
 export const API_EDIT_PRODUCT_IN_CART = "editProductIdInCart";
+export const DELETE_PRODUCT_IN_CART = "removeProductByUserId";
+export const API_ADD_PRODUCT_TO_CART = "addProductToCart";
+
+// AUTH
+export const API_LOGIN = "login"
+export const API_SIGN_UP = "register"
+export const GET_INFO = "getUserById"
+export const EDIT_INFO = "editInfo"
+
+// ORDER
+export const API_ADD_ORDER = "addOrder";
+export const API_GET_ORDERS = "getOrders";

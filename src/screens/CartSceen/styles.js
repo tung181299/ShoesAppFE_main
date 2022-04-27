@@ -27,6 +27,11 @@ const styles = StyleSheet.create({
   listItems: {
     marginTop: 5
   },
+  empty: {
+    fontSize: 20,
+    marginTop: 30,
+    textAlign: "center"
+  }
 });
 
 export default styles;

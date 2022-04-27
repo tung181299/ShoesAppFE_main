@@ -10,7 +10,6 @@ import styles from './styles';
 import {formatVND} from '../../utils/currency'
 
 const moveToDetail = (item, navigate) => {
-  console.log("ITEM: ", item._id);
   navigate('Product Detail', {product: item})
 }
 
@@ -30,7 +29,7 @@ const CardItem = ({ item, navigate }) => (
     </View>
     <View style={styles.horizontalLine} />
     <View style={styles.dFlexBetween}>
-      <Text style={styles.textBold}>Price: {formatVND(item.price, 'VND')}</Text>
+      <Text style={styles.textBold}>{formatVND(item.price, 'VND')}</Text>
       <TouchableOpacity style={styles.iconCart}>
         <Ionicons name="cart-outline" size={27} color={'#fff'}/>
       </TouchableOpacity>

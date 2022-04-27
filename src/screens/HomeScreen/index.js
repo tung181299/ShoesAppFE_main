@@ -12,11 +12,12 @@ import styles from './styles';
 import {useState} from 'react';
 var _ = require('lodash');
 import * as TextStyle from '../../common/text';
-import {request_get_products} from '../../redux/actions';
+import {request_get_products, logout, request_get_products_in_cart} from '../../redux/actions';
 import {useDispatch, useSelector} from 'react-redux';
 import Loading from '../../components/Loading';
-import { formatVND } from '../../utils/currency';
-import { handleText } from '../../utils/text';
+import {formatVND} from '../../utils/currency';
+import {handleText} from '../../utils/text';
+import * as Navigation from '../../navigation/RootNavigation'
 
 export default function Home({navigation: {navigate}}) {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -24,10 +25,11 @@ export default function Home({navigation: {navigate}}) {
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
   const {loading, data, error} = useSelector(state => state.productReducer);
+  const {user} = useSelector(state => state.authReducers);
   let optionAll = [{brand: "All"}];
 
   useEffect(() => {
-    if (data.length == 0) {
+    if (data && data.length == 0) {
       dispatch(request_get_products({brand: selectedCategory, type: ""}));
     }
     let category = _.uniqBy(data, 'brand').map(({ brand }) => ({brand}));
@@ -36,10 +38,12 @@ export default function Home({navigation: {navigate}}) {
     // setSelectedCategory(category && category[0] ? category[0].brand : null);
     // let products = _.filter(data, {brand: category && category[0] ? category[0].brand : null});
     setProducts(data);
+    // get cart
+    dispatch(request_get_products_in_cart(user.userId));
   }, [data]);
 
   const onSelectCategory = category => {
-    console.log('onselect category: ',category);
+    console.log('onselect category: ', category);
     setSelectedCategory(category);
     if(category === "All") {
       setProducts(data);
@@ -93,7 +97,9 @@ export default function Home({navigation: {navigate}}) {
             ellipsizeMode="tail">
             {item.name}
           </Text>
-          <Text style={[TextStyle.medium, styles.price]}>{formatVND(item.price, "VND")}</Text>
+          <Text style={[TextStyle.medium, styles.price]}>
+            {formatVND(item.price, 'VND')}
+          </Text>
         </View>
       </TouchableOpacity>
     );
@@ -102,6 +108,8 @@ export default function Home({navigation: {navigate}}) {
   const seeMore = () => {
     navigate('See More', {products: products, brand: selectedCategory});
   };
+
+  console.log('currentUser from store: ', user);
 
   return (
     <View style={styles.main}>
@@ -131,7 +139,7 @@ export default function Home({navigation: {navigate}}) {
             {/* Hot products list */}
             <FlatList
               columnWrapperStyle={{justifyContent: 'space-between'}}
-              data={products.slice(0,10)}
+              data={products && products.slice(0,10)}
               numColumns={2}
               renderItem={({item}) => renderItemProduct(item)}
               contentContainerStyle={{margin: 5, padding: 5, paddingBottom: 20}}
